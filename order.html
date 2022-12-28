@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Features · Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/features/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Roboto:ital,wght@0,300;0,400;1,400&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+	<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="myProjects/webProject/icofont/css/icofont.min.css">
+	<link href="assets/dist/css/basic.css?v=2.1" rel="stylesheet">
+
+  </head>
+  <body>
+    
+	<div id="page-order-confirm">
+		<div id="header-block">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<a href="#" class="back-header"><img class="image-product" src="assets/images/back.PNG"></a>
+						<h2 class="page-title text-center">Confirm Order</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="order-desc-block">
+			<div class="store-name"><img src="assets/images/store.jpg"> Starbucks - Ngagel Jaya Selatan Surabaya</div>
+			<div id="order-item">
+				<div class="menu-thumbnail">
+					<img class="image-product" src="assets/images/menu1.png">
+					<div class="desc-menu">
+						<a class="menu-title"><span class="qty-item">1x</span> Lorem ipsum dolor sit amet ametris</a>
+						<div class="additional-selected">Grande</div>
+						<div class="price-block">
+							<div>
+								<span class="discountprice">Rp120.000</span>
+								<span class="pricenow">Rp99.000</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="menu-thumbnail">
+					<img class="image-product" src="assets/images/menu2.png">
+					<div class="desc-menu">
+						<a class="menu-title"><span class="qty-item">1x</span> Lorem ipsum dolor</a>
+						<div class="price-block">
+							<div>
+								<span class="pricenow">Rp54.000</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-desc-order">
+				<div class="note-order">
+					<label>Catatan:</label>
+					<input type="text" placeholder="Mohon tinggalkan catatan...">
+				</div>
+				<div class="total-order">
+					<label>Order Total (2 item):</label>
+					<div class="total-price-order">Rp153.000</div>
+				</div>
+			</div>
+		</div>
+		<div id="voucher-order">
+			<label><img class="image-product" src="assets/images/voucher.PNG"> Voucher</label>
+			<input type="text" placeholder="Masukkan voucher...">
+		</div>
+		<div id="price-detail-order">
+			<div class="payment-option-block">
+				<label><img class="image-product" src="assets/images/payment.png"> Payment Option</label>
+				<div class="payment-option-button rigt-icon">ShopeePay</div>
+			</div>
+			<div class="detail-payment">
+				<table>
+					<tr>
+						<td>Order Subtotal (2 item)</td>
+						<td>Rp153.000</td>
+					</tr>
+					<tr>
+						<td>Delivery Fee</td>
+						<td>Rp20.000</td>
+					</tr>
+					<tr>
+						<td>Service Fee</td>
+						<td>Rp4.000</td>
+					</tr>
+				</table>
+			</div>
+			<div id="total-payment">
+				<label>Total</label>
+				<div>Rp177.000</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer-block">
+		<div></div>
+		<div class="d-flex align-items-center">
+			<div id="total-amount"><span class="label-total">Total Payment</span><span class="pricenow">Rp177.000</span></div>
+			<input type="submit" class="btn btn-submit" value="Place Order">
+		</div>
+	</div>
+		
+
+
+    <script src="assets/dist/js/jquery.min.js"></script>
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+	<script>
+		$('#booklist').click(function(){
+			$('body').addClass("active");
+			$('#bg-layer').addClass("active");
+			$('#list-categories').addClass("active");
+		});
+		$('#chart-icon').click(function(){
+			$('body').toggleClass("active");
+			$('#bg-layer').toggleClass("active");
+			$('#mybasket').toggleClass("active");
+		});
+		$('#mybasket .close-button').click(function(){
+			$('body').addClass("active");
+			$('#bg-layer').addClass("active");
+			$('#mybasket').removeClass("active");
+		});
+		$('#menu-block .add-item').click(function(){
+			$('body').addClass("active");
+			$('#bg-layer').addClass("active");
+			$('#add-new-item').addClass("active");
+			$('#footer-additional').addClass("active");
+		});
+		$('#bg-layer').click(function(){
+			$('body').removeClass("active");
+			$('#bg-layer').removeClass("active");
+			$('#list-categories').removeClass("active");
+			$('#add-new-item').removeClass("active");
+			$('#footer-additional').removeClass("active");
+			$('#mybasket').removeClass("active");
+		});
+		$('.close-button').click(function(){
+			$('body').removeClass("active");
+			$('#bg-layer').removeClass("active");
+			$('#list-categories').removeClass("active");
+			$('#add-new-item').removeClass("active");
+			$('#footer-additional').removeClass("active");
+		});
+		$('#list-categories a').click(function(){
+			$('body').removeClass("active");
+			$('#bg-layer').removeClass("active");
+			$('#list-categories').removeClass("active");
+		});
+	</script>
+      
+  </body>
+</html>
