@@ -51,7 +51,11 @@
                                     <div class="customer-address">Jl. Bambu Runcing No.66, Kec. Bambu Runcing III, Jakarta Pusat, 66661</div>
                                 </div>
                                 <div class="col-12 col-md-2 d-flex justify-content-end align-items-start">
-                                    <a class="btn btn-primary" href="#">Ubah Alamat</a>
+                                    <!--<a class="btn btn-primary" href="#">Ubah Alamat</a>-->
+									<!-- Button trigger modal -->
+									  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addressModal">
+										Ubah Alamat
+									  </button>
                                 </div>
                             </div>
                         </div>
@@ -257,12 +261,53 @@
             </div>
         </div>
     </form>
+	<!-- addressModal -->
+	<div class="modal fade" id="addressModal" tabindex="-1" aria-labelledby="addressModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title" id="addressModalLabel">Semua Alamat</h5>
+		  </div>
+		  <div class="modal-body">
+			<div class="add-address"><a href="#">+ Tambah Alamat</a></div>
+			<div class="address-block">
+				<label class="address-list d-flex">
+					<input type="radio" name="address">
+					<div class="action-radio"></div>
+					<div class="me-3">
+						<div class="fw-bold mb-1 customer-name">Cristiano Ronaldo</div>
+						<div class="customer-phone mb-1">081XXXXXXXXX</div>
+						<div class="customer-address">Jl. Bambu Runcing No.66, Kec. Bambu Runcing III, Jakarta Pusat, 66661</div>
+					</div>
+					<a href="#" class="address-edit">Ubah Alamat</a>
+				</label>
+				<label class="address-list d-flex">
+					<input type="radio" name="address">
+					<div class="action-radio"></div>
+					<div class="me-3">
+						<div class="fw-bold mb-1 customer-name">Ryomen Sukuna</div>
+						<div class="customer-phone mb-1">081XXXXXXXXX</div>
+						<div class="customer-address">Jl. Bambu Runcing No.66, Kec. Bambu Runcing III, Jakarta Pusat, 66661</div>
+					</div>
+					<a href="#" class="address-edit">Ubah Alamat</a>
+				</label>
+			</div>
+
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+			<button type="button" class="btn btn-primary">Konfirmasi</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
 		
 
 
-    <script src="{{asset('js/jquery.min.js')}}"></script>
-    <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
+    <script src="assets/dist/js/jquery.min.js"></script>
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
 	<script>
+		
 		$('#booklist').click(function(){
 			$('body').addClass("active");
 			$('#bg-layer').addClass("active");
