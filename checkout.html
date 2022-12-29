@@ -25,7 +25,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 position-relative">
-                            <a href="#" class="d-md-none back-header"><img class="image-product" src="assets/images/back.png"></a>
+                            <a href="#" class="d-md-none back-header"><img class="image-back" src="assets/images/back.svg    "></a>
                             <h2 class="page-title">Checkout</h2>
                         </div>
                     </div>
@@ -38,11 +38,11 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-12 col-md-4 d-md-flex align-items-start">
-                                    <div class="me-3">
-                                        <div class="fw-bold mb-1 customer-name">Cristiano Ronaldo</div>
+                                    <div class="d-flex d-md-block">
+                                        <div class="fw-bold mb-1 customer-name me-3">Cristiano Ronaldo</div>
                                         <div class="fw-bold customer-phone">081XXXXXXXXX</div>
                                     </div>
-                                    <div class="d-flex ">
+                                    <div class="d-none d-md-flex ">
                                         <div class="me-2">(Rumah)</div>
                                         <label class="label-address">Utama</label>
                                     </div>
@@ -53,9 +53,9 @@
                                 <div class="col-12 col-md-2 d-flex justify-content-end align-items-start">
                                     <!--<a class="btn btn-primary" href="#">Ubah Alamat</a>-->
 									<!-- Button trigger modal -->
-									  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addressModal">
-										Ubah Alamat
-									  </button>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addressModal">
+                                    Ubah Alamat
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -77,7 +77,7 @@
                                         <div class="desc-menu">
                                             <div class="menu-title">Iphone 14 Pro Max</div>
                                             <div class="additional-selected">Warna Ungu</div>
-                                            <div class="price-block">
+                                            <div class="price-block d-none d-md-block">
                                                 <div>
                                                     <span class="discountprice">Rp. 14.000.000</span>
                                                     <span class="pricenow">Rp. 13.000.000</span>
@@ -85,9 +85,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-md-2">Rp. 13.000.000</div>
-                                    <div class="col-12 col-md-1 text-center">1</div>
-                                    <div class="col-12 col-md-2 text-end">Rp. 13.000.000</div>
+                                    <div class="col-12 col-md-2 d-none d-md-block">Rp. 13.000.000</div>
+                                    <div class="col-12 col-md-1 text-center qty-product">1 <span class="d-inline d-md-none">Unit</span></div>
+                                    <div class="col-12 col-md-2 text-end subtotal-product">Rp. 13.000.000</div>
                                 </div>
                                 <div class="menu-thumbnail row">
                                     <div class="d-flex col-12 col-md-7">
@@ -95,27 +95,38 @@
                                         <div class="desc-menu">
                                             <div class="menu-title">Earphone TWS Anker Soundcore</div>
                                             <div class="additional-selected">Warna Hitam</div>
-                                            <div class="price-block">
+                                            <div class="price-block d-none d-md-block">
                                                 <div>
                                                     <span class="pricenow">Rp. 260.000</span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-md-2">Rp. 130.000</div>
-                                    <div class="col-12 col-md-1 text-center">2</div>
-                                    <div class="col-12 col-md-2 text-end">Rp. 260.000</div>
+                                    <div class="col-12 col-md-2 d-none d-md-block">Rp. 130.000</div>
+                                    <div class="col-12 col-md-1 text-center qty-product">2 <span class="d-inline d-md-none">Unit</span></div>
+                                    <div class="col-12 col-md-2 text-end subtotal-product">Rp. 260.000</div>
                                 </div>
                             </div>
                         </div>
                         <div class="card-footer">
                             <div class="row">
-                                <div class="col-12 col-md-7">Opsi Pengiriman : </div>
-                                <div class="col-12 col-md-3">
-                                    Reguler (2Kg) <a class="ms-3 ubah-pengiriman btn btn-primary">Ubah</a>
-                                    <label class="info-ongkir">Akan diterima pada tanggal 1 Jan - 5 Jan</label>
+                                <div class="col-12 col-md-7 label-ongkir">Opsi Pengiriman : </div>
+                                <div class="col-12 col-md-5 d-flex shipping-input">
+                                    <div class="col-8">
+                                        Reguler (2Kg) 
+                                        <!--<a class="ms-3 ubah-pengiriman btn btn-primary">Ubah</a>-->
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="ms-3 ubah-pengiriman btn btn-primary" data-bs-toggle="modal" data-bs-target="#shippingModal">
+                                        Ubah
+                                        </button>
+                                        <label class="info-ongkir">Akan diterima pada tanggal 1 Jan - 5 Jan</label>
+                                    </div>
+                                    <div class="col-4 text-end nominal-ongkir d-flex align-items-center justify-content-end">Rp. 10.000</div>
                                 </div>
-                                <div class="col-12 col-md-2 text-end nominal-ongkir d-flex align-items-center justify-content-end">Rp. 10.000</div>
+                                <div class="d-flex d-md-none total-order">
+                                    <div>Total Pesanan (3 Produk)</div>
+                                    <div class="order-total">Rp. 13.320.000</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -127,7 +138,7 @@
                                 <div class="col-12 col-md-3">
                                     <h2>Metode Pembayaran</h2>
                                 </div>
-                                <div class="col-12 col-md-9">
+                                <div class="col-12 col-md-9 d-none d-md-block">
                                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link active" id="transfer-tab" data-bs-toggle="tab" data-bs-target="#transfer" type="button" role="tab" aria-controls="transfer" aria-selected="true">Transfer Bank</button>
@@ -145,7 +156,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-content" id="myTabContent">
+                        <div class="tab-content d-none d-md-block" id="myTabContent">
                             <div class="tab-pane fade show active" id="transfer" role="tabpanel" aria-labelledby="transfer-tab">
                                 <div class="row">
                                     <div class="col-12 col-md-3">
@@ -256,11 +267,17 @@
         <div id="footer-block">
             <div class="container">
                 <div class="d-flex align-items-center justify-content-end">
-                    <input type="submit" class="btn btn-submit" value="Buat Pesanan">
+                    <div id="total-amount" class="d-block d-md-none">
+                        <span class="label-total">Total Pembayaran</span>
+                        <span class="pricenow">Rp. 13.170.000</span>
+                    </div>
+                    <input type="submit" class="btn btn-submit d-none d-md-block" value="Buat Pesanan">
+                    <input type="submit" class="btn btn-submit d-block d-md-none" value="Checkout">
                 </div>
             </div>
         </div>
     </form>
+
 	<!-- addressModal -->
 	<div class="modal fade" id="addressModal" tabindex="-1" aria-labelledby="addressModalLabel" aria-hidden="true">
 	  <div class="modal-dialog">
@@ -301,6 +318,56 @@
 		</div>
 	  </div>
 	</div>
+
+    
+	<!-- shippingModal -->
+	<div class="modal fade" id="shippingModal" tabindex="-1" aria-labelledby="shippingModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title" id="shippingModalLabel">Pilih Opsi Pengiriman</h5>
+		  </div>
+		  <div class="modal-body">
+			<div class="shipping-block">
+				<div class="fw-500">Pilih Jasa Pengiriman</div>
+                <div class="text-shipping mb-3">Estimasi tanggal diterima tergantung pada waktu pengemasan Penjual dan waktu pengiriman ke lokasi Anda</div>
+                <select class="form-control">
+                    <option>Reguler</option>
+                    <option>Express</option>
+                </select>
+            </div>
+            <div class="shipping-option">
+                <label class="shipping-list d-flex">
+					<input type="radio" name="address" checked>
+					<div class="shipping-action-radio"></div>
+                    <div>
+                        <div class="d-flex">
+                            <div class="fw-bold shipping-name me-3">SAP Regular</div>
+                            <div class="shipping-price">Rp. 10.000</div>
+                        </div>
+                        <div class="shipping-desc">Akan diterima pada tanggal 13 - 19 Des</div>
+                    </div>
+				</label>
+                <label class="shipping-list d-flex">
+					<input type="radio" name="address">
+					<div class="shipping-action-radio"></div>
+                    <div>
+                        <div class="d-flex">
+                            <div class="fw-bold shipping-name me-3">Ninja Express Regular </div>
+                            <div class="shipping-price">Rp. 10.000</div>
+                        </div>
+                        <div class="shipping-desc">Akan diterima pada tanggal 13 - 22 Des</div>
+                    </div>
+				</label>
+            </div>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Nanti Saja</button>
+			<button type="button" class="btn btn-primary">Simpan</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
 		
 
 
@@ -308,47 +375,7 @@
     <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
 	<script>
 		
-		$('#booklist').click(function(){
-			$('body').addClass("active");
-			$('#bg-layer').addClass("active");
-			$('#list-categories').addClass("active");
-		});
-		$('#chart-icon').click(function(){
-			$('body').toggleClass("active");
-			$('#bg-layer').toggleClass("active");
-			$('#mybasket').toggleClass("active");
-		});
-		$('#mybasket .close-button').click(function(){
-			$('body').addClass("active");
-			$('#bg-layer').addClass("active");
-			$('#mybasket').removeClass("active");
-		});
-		$('#menu-block .add-item').click(function(){
-			$('body').addClass("active");
-			$('#bg-layer').addClass("active");
-			$('#add-new-item').addClass("active");
-			$('#footer-additional').addClass("active");
-		});
-		$('#bg-layer').click(function(){
-			$('body').removeClass("active");
-			$('#bg-layer').removeClass("active");
-			$('#list-categories').removeClass("active");
-			$('#add-new-item').removeClass("active");
-			$('#footer-additional').removeClass("active");
-			$('#mybasket').removeClass("active");
-		});
-		$('.close-button').click(function(){
-			$('body').removeClass("active");
-			$('#bg-layer').removeClass("active");
-			$('#list-categories').removeClass("active");
-			$('#add-new-item').removeClass("active");
-			$('#footer-additional').removeClass("active");
-		});
-		$('#list-categories a').click(function(){
-			$('body').removeClass("active");
-			$('#bg-layer').removeClass("active");
-			$('#list-categories').removeClass("active");
-		});
+		
 	</script>
     </body>
 </html>
