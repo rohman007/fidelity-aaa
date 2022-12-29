@@ -468,13 +468,15 @@ div#voucher-order input[type="submit"] {
     font-size: 12pt;
 }
 input:focus,input:active,textarea:focus,textarea:active{outline:none;box-shadow:none !important}
-a.back-header {
+.back-header {
     width: 40px;
     display: block;
     position: absolute;
     left: 9px;
     top: 4px;
     padding: 10px 7px;
+    border: 0;
+    background: transparent;
 }
 .store-name {
     padding: 14px 15px;
@@ -571,6 +573,9 @@ div#order-item span.discountprice {
     .card-header h2 {
         font-size: 13pt;
     }
+	.modal-body {
+		padding: 20px 20px;
+	}
     .card {
         border: 0;
         margin-bottom: 15px;
@@ -745,7 +750,7 @@ div#order-item span.discountprice {
         background: #D94D4D;
         color: #fff;
         font-size: 12pt;
-        padding: 25px 30px;
+        padding: 20px 30px;
         font-weight: 400;
         border-radius: 5px;
     }
@@ -756,15 +761,19 @@ div#order-item span.discountprice {
         justify-content: space-between !important;
     }
     div#page-order-confirm {
-        padding-bottom: 75px;
+        padding-bottom: 65px;
     }
+	.modal-footer {
+		display: none;
+	}
     .modal-title {
-        font-size: 14pt;
-        font-weight: 600;
-        text-align: center;
-        width: 100%;
-        padding: 16px 0 15px;
-    }
+		font-size: 14pt;
+		font-weight: 600;
+		text-align: center;
+		width: 100%;
+		padding: 16px 0 15px;
+		line-height: normal;
+	}
     .modal-header {
         border-bottom: 15px solid #F5F5F5;
         padding: 0;
