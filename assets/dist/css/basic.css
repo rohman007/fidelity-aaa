@@ -290,6 +290,7 @@ label.custome-bank-radio input {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0 16px;
 }
 .bank-name {
     font-weight: 500;
@@ -303,9 +304,6 @@ label.custome-bank-radio input {
     font-weight: 400;
     font-size: 11pt;
 }
-
-
-
 div#header-block {
     margin-bottom: 10px;
     padding-bottom: 0px;
@@ -613,13 +611,13 @@ div#order-item span.discountprice {
         content: "";
         display: block;
         position: absolute;
-        width: 13px;
-        height: 13px;
+        width: 10px;
+        height: 10px;
         border-right: 3px solid #3A3A3A;
         border-bottom: 3px solid #3A3A3A;
         top: 6px;
         transform: rotate(-45deg);
-        left: 3px;
+        left: 11px;
     }
     div#customer-data button.btn.btn-primary,.shipping-input button.btn.btn-primary {
         position: absolute;
@@ -683,7 +681,7 @@ div#order-item span.discountprice {
     .total-order {
         align-items: center;
         justify-content: space-between;
-        padding: 16px 16px 2px;
+        padding: 16px 20px 2px;
         border-top: 1px solid #E1E1E1;
         margin: 15px -18px 0;
         width: 100vw;
@@ -701,9 +699,16 @@ div#order-item span.discountprice {
         margin: 0 -15px;
     }
     div#payment-data h2 {
-        font-size: 13pt;
+        font-size: 12pt;
         font-weight: 500;
         margin: 0;
+    }
+    .payment-button{
+        background: transparent;
+        border: 0;
+        padding: 0;
+        color: #d94d4d;
+        white-space: nowrap;
     }
     div#payment-data .card-body {
         padding: 23px 20px;
@@ -718,6 +723,10 @@ div#order-item span.discountprice {
         margin: 0;
         border-radius: 10px 10px 0 0;
         border-bottom: 1px solid #E1E1E1;
+    }
+    .payment-button img {
+        height: 15px;
+        margin-left: 10px !important;
     }
     div#voucher-order input[type="text"]{font-size: 11pt;}
     div#voucher-order input[type="submit"] {
@@ -754,6 +763,14 @@ div#order-item span.discountprice {
         font-weight: 400;
         border-radius: 5px;
     }
+    .modal-footer .btn-primary {
+        width: 100%;
+        padding: 12px 20px;
+    }
+    .modal-footer {
+        border: 0;
+    }
+    .modal-footer .btn-secondary{display: none;}
     div#footer-block .container {
         padding-right: 0;
     }
@@ -763,9 +780,6 @@ div#order-item span.discountprice {
     div#page-order-confirm {
         padding-bottom: 65px;
     }
-	.modal-footer {
-		display: none;
-	}
     .modal-title {
 		font-size: 14pt;
 		font-weight: 600;
@@ -780,5 +794,41 @@ div#order-item span.discountprice {
     }
     .address-block .mb-1 {
         margin: 0 !important;
+    }
+    button:focus{outline: none;box-shadow: none !important;}
+    .payment-block-popup .accordion-button::after {
+        background-image: url(../../images/arrow-down.svg) !important;
+    }
+    .payment-block-popup button.accordion-button {
+        background: transparent;
+        border: 0;
+        padding-left: 0;
+        padding-right: 0;
+        border-radius: 0 !important;
+        color: #3A3A3A;
+        font-weight: 500;
+        box-shadow: none;
+    }
+    .payment-block-popup .accordion-item {
+        border: 0;
+    }
+    .payment-block-popup .accordion-body {
+        padding: 0;
+        margin: 0 -20px;
+    }
+    .bank-image {
+        width: 60px;
+        height: 60px;
+        padding: 5px;
+        margin-right: 10px;
+    }
+    .payment-input {
+        display: flex !important;
+        width: 100% !important;
+        text-align: left !important;
+        align-items: center;
+        border-bottom: 1px solid #E1E1E1;
+        margin: 0 !important;
+        padding: 15px 20px 15px;
     }
 }

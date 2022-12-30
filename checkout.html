@@ -51,7 +51,6 @@
                                     <div class="customer-address">Jl. Bambu Runcing No.66, Kec. Bambu Runcing III, Jakarta Pusat, 66661</div>
                                 </div>
                                 <div class="col-12 col-md-2 d-flex justify-content-end align-items-start">
-                                    <!--<a class="btn btn-primary" href="#">Ubah Alamat</a>-->
 									<!-- Button trigger modal -->
                                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addressModal">
                                     Ubah Alamat
@@ -114,7 +113,6 @@
                                 <div class="col-12 col-md-5 d-flex shipping-input">
                                     <div class="col-8">
                                         Reguler (2Kg) 
-                                        <!--<a class="ms-3 ubah-pengiriman btn btn-primary">Ubah</a>-->
                                         <!-- Button trigger modal -->
                                         <button type="button" class="ms-3 ubah-pengiriman btn btn-primary" data-bs-toggle="modal" data-bs-target="#shippingModal">
                                         Ubah
@@ -135,9 +133,16 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="row align-items-center">
-                                <div class="col-12 col-md-3">
+                                <div class="col-7 col-md-3">
                                     <h2>Metode Pembayaran</h2>
                                 </div>
+                                <div class="col-5 d-flex d-md-none justify-content-end">
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="d-flex d-md-none payment-button align-items-center" data-bs-toggle="modal" data-bs-target="#paymentModal">
+                                        Pilih Pembayaran <img class="ms-1" src="assets/images/arrow-right.svg">
+                                    </button>
+                                </div>
+
                                 <div class="col-12 col-md-9 d-none d-md-block">
                                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                                         <li class="nav-item" role="presentation">
@@ -243,8 +248,44 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="qris" role="tabpanel" aria-labelledby="qris-tab">Qris</div>
-                            <div class="tab-pane fade" id="paylatter" role="tabpanel" aria-labelledby="paylatter-tab">Paylatter</div>
+                            <div class="tab-pane fade" id="qris" role="tabpanel" aria-labelledby="qris-tab">
+                                <div class="row">
+                                    <div class="col-12 col-md-3">
+                                        <h2 class="mt-1">Pilih Qris</h2>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-4">
+                                                <label class="custome-bank-radio">
+                                                    <input type="radio" name="payment">
+                                                    <div class="bank-image"><img src="assets/images/qris.png"></div>
+                                                    <div class="bank-name">QRIS</div>
+                                                    <div class="fee-name">Fee Rp. 10.000</div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="paylatter" role="tabpanel" aria-labelledby="paylatter-tab">
+                                <div class="row">
+                                    <div class="col-12 col-md-3">
+                                        <h2 class="mt-1">Pilih Paylatter</h2>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-4">
+                                                <label class="custome-bank-radio">
+                                                    <input type="radio" name="payment">
+                                                    <div class="bank-image"><img src="assets/images/kredivo.png"></div>
+                                                    <div class="bank-name">Kredivo</div>
+                                                    <div class="fee-name">Fee Rp. 10.000</div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -353,7 +394,7 @@
 		<div class="modal-content">
 		  <div class="modal-header">
 			<button type="button" class="d-md-none back-header" data-bs-dismiss="modal"><img class="image-back" src="assets/images/back.svg"></button>
-			<h5 class="modal-title" id="shippingModalLabel">Pilih Opsi Pengiriman</h5>
+			<h5 class="modal-title" id="shippingModalLabel">Opsi Pengiriman</h5>
 		  </div>
 		  <div class="modal-body">
 			<div class="shipping-block">
@@ -397,6 +438,137 @@
 	  </div>
 	</div>
 		
+	<!-- paymentModal -->
+	<div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="d-md-none back-header" data-bs-dismiss="modal"><img class="image-back" src="assets/images/back.svg"></button>
+              <h5 class="modal-title" id="paymentModalLabel">Metode Pembayaran</h5>
+            </div>
+            <div class="modal-body">
+              <div class="payment-block-popup">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Transfer Bank
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="row">
+                                <div class="col-12 col-sm-4">
+                                    <label class="custome-bank-radio payment-input">
+                                        <input type="radio" name="payment">
+                                        <div class="bank-image"><img src="assets/images/permata.jpg"></div>
+                                        <div>
+                                            <div class="bank-name">Bank Permata</div>
+                                            <div class="fee-name">Fee Rp. 10.000</div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="col-12 col-sm-4">
+                                    <label class="custome-bank-radio payment-input">
+                                        <input type="radio" name="payment">
+                                        <div class="bank-image"><img src="assets/images/bsi.jpg"></div>
+                                        <div>
+                                            <div class="bank-name">Bank Syariah Indonesia (BSI)</div>
+                                            <div class="fee-name">Fee Rp. 10.000</div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="col-12 col-sm-4">
+                                    <label class="custome-bank-radio payment-input">
+                                        <input type="radio" name="payment">
+                                        <div class="bank-image"><img src="assets/images/bni.jpg"></div>
+                                        <div>
+                                            <div class="bank-name">Bank BNI</div>
+                                            <div class="fee-name">Fee Rp. 10.000</div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="col-12 col-sm-4">
+                                    <label class="custome-bank-radio payment-input">
+                                        <input type="radio" name="payment">
+                                        <div class="bank-image"><img src="assets/images/mandiri.jpg"></div>
+                                        <div>
+                                            <div class="bank-name">Bank Mandiri</div>
+                                            <div class="fee-name">Fee Rp. 10.000</div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="col-12 col-sm-4">
+                                    <label class="custome-bank-radio payment-input">
+                                        <input type="radio" name="payment">
+                                        <div class="bank-image"><img src="assets/images/bri.jpg"></div>
+                                        <div>
+                                            <div class="bank-name">Bank BRI</div>
+                                            <div class="fee-name">Fee Rp. 10.000</div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="col-12 col-sm-4">
+                                    <label class="custome-bank-radio payment-input">
+                                        <input type="radio" name="payment">
+                                        <div class="bank-image"><img src="assets/images/bca.jpg"></div>
+                                        <div>
+                                            <div class="bank-name">Bank BCA</div>
+                                            <div class="fee-name">Fee Rp. 10.000</div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            E-Wallet
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Qris
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Qris
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+  
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+              <button type="button" class="btn btn-primary">Konfirmasi</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
     <script src="assets/dist/js/jquery.min.js"></script>
