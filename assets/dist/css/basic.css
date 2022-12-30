@@ -831,4 +831,17 @@ div#order-item span.discountprice {
         margin: 0 !important;
         padding: 15px 20px 15px;
     }
+    input:checked ~ .bank-image:before {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 25px;
+        top: 50%;
+        width: 11px;
+        height: 17px;
+        border-bottom: 3px solid #D94D4D;
+        border-right: 3px solid #D94D4D;
+        transform: rotate(45deg);
+        margin-top: -10px;
+    }
 }
